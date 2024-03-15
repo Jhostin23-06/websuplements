@@ -1,13 +1,13 @@
-import image1 from '../../public/img1.jpg';
-import image2 from '../../public/img2.jpg';
-import image3 from '../../public/img3.jpg';
-import image4 from '../../public/img4.jpg';
-import image5 from '../../public/img5.jpg';
-import image6 from '../../public/img6.jpg';
-import image7 from '../../public/img7.jpg';
-import image8 from '../../public/img8.jpg';
-import image9 from '../../public/img9.jpg';
-import image10 from '../../public/img10.jpg';
+import image1 from '../../public/img1.webp';
+import image2 from '../../public/img2.webp';
+import image3 from '../../public/img3.webp';
+import image4 from '../../public/img4.webp';
+import image5 from '../../public/img5.webp';
+import image6 from '../../public/img6.webp';
+import image7 from '../../public/img7.webp';
+import image8 from '../../public/img8.webp';
+import image9 from '../../public/img9.webp';
+import image10 from '../../public/img10.webp';
 
 export interface Producto {
     id: string;
