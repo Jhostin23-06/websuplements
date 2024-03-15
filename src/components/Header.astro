@@ -1,0 +1,19 @@
+---
+import { Image } from "astro:assets";
+---
+<header class="py-8 px-4 lg:py-10 lg:px-0 text-center flex justify-between w-full">
+    <div class="lg:flex lg:items-center md:flex md:items-center lg:justify-center md:justify-center lg:gap-10 md:gap-10 w-full text-center mb-6 mt-20">
+        <div>
+            <h2 class="mb-4 text-5xl tracking-tight font-extrabold text-white">
+                Failoc Suplementos
+            </h2>
+            
+            <p class="font-light text-gray-500 sm:text-xl dark:text-gray-400 lg:w-96 md:w-96">
+                Toda la información acerca de los suplementos que necesitas para mejorar tu rendimiento.
+            </p>
+        </div>
+
+        <Image class="text-white bg-white rounded-full lg:mx-0 md:mx-0 mx-auto mt-5 lg:mt-0" loading={"lazy"} format="png" width={150} height={150} src="/logo.png" alt="Logo Suplementos" />
+
+    </div>
+</header>

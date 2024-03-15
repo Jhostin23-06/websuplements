@@ -1,0 +1,19 @@
+---
+import type { Producto } from "@/lib/data";
+interface Props {
+    producto: Producto;
+    alt?: string;
+}
+const { producto, alt } = Astro.props;
+const { title, description, image } = producto;
+import { Image } from "astro:assets";
+---
+
+<div class="hero-content flex-col lg:flex-row md:flex-row justify-center items-center mt-24">
+  <Image src={image} class="max-w-full sm:max-w-lg rounded-lg shadow-slate-800 shadow-md" alt={alt} />
+  <div class="md:text-start text-center">
+    <h1 class="md:text-5xl font-bold text-3xl w-full text-pretty">{title}</h1>
+    <p class="py-6">{description}</p>
+    <button class="btn btn-primary animate-tada animate-delay-1000 ">Pedir ahora</button>
+  </div>
+</div>

@@ -1,0 +1,90 @@
+---
+import Nav from "../components/Nav.astro";
+import SmokeBackground from "../components/SmokeBackground.astro";
+import NoiseBackground from "../components/NoiseBackground.astro";
+import NavMobile from "../components/NavMobile.astro";
+import Footer from "../components/Footer.astro";
+import ViewTransitions from "astro/components/ViewTransitions.astro";
+import "@fontsource-variable/work-sans";
+
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en" class="oldie">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="auto" content="Jhostin Bravo" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+		<ViewTransitions />
+	</head>
+	<body class="pb-32">
+		<!-- 		<Ripley /> -->
+				<NoiseBackground />
+<!-- 		<SmokeBackground /> -->
+		<Nav />
+		<NavMobile />
+		<main class="max-w-5xl px-4 m-auto animate-blurred-fade-in">
+			<slot />
+		</main>
+		<Footer />
+		<style is:global>
+			:root {
+				background-color: transparent;
+				color-scheme: dark light;
+			}
+			html,
+			body {
+				height: 100%;
+				display: flex;
+				flex-direction: column;
+				font-family: system-ui, sans-serif;
+				background-size: 224px;
+			}
+			main {
+				flex-grow: 1;
+				position: relative;
+			}
+
+			#nav-mobile {
+				animation: blurMobile linear both;
+				animation-timeline: scroll();
+				animation-range: 0 500px;
+			}
+
+			#header-nav {
+				animation: blurMobile linear both;
+				animation-timeline: scroll();
+				animation-range: 0 500px;
+			}
+
+			@keyframes blurMobile {
+				to {
+					box-shadow:
+						0px 5px 50px rgba(0, 0, 0, 0.1),
+						0px 0px 0 1px rgba(0, 0, 0, 0.3);
+					background: rgba(0, 0, 0, 0.3);
+					backdrop-filter: blur(10px);
+				}
+			}
+
+			@keyframes blur {
+				to {
+					box-shadow:
+						0px 5px 50px rgba(0, 0, 0, 0.1),
+						0px 0px 0 1px rgba(0, 0, 0, 0.3);
+					background: rgba(0, 0, 0, 0.3);
+					backdrop-filter: blur(10px);
+				}
+			}
+		</style>
+	</body>
+</html>

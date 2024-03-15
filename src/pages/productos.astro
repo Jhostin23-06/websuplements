@@ -1,0 +1,23 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Producto from '../components/Producto.astro';
+import Nav from '@/components/Nav.astro';
+import { productos } from "../lib/data";
+---
+
+<Layout title="Productos">
+  <div
+    class="grid grid-cols-1 mt-32 sm:grid-cols-2 my-4 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-8"
+  >
+    {
+      productos.map((producto) => (
+        <Producto
+          producto={producto}
+          href=`/productos/${producto.id}`
+        />
+
+      ))
+    }
+    <img src="../../public/banner.jpg" alt="Banner" class="w-full rounded-md lg:col-span-2 sm:col-span-full">
+  </div>
+</Layout>

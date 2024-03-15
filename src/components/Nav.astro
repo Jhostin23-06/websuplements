@@ -1,0 +1,58 @@
+---
+import HeaderButton  from '../components/HeaderButton.astro'
+---
+<nav id="header-nav" class="flex-col md:flex lg:flex sm:block hidden justify-center items-center w-screen top-0 text-center md:flex-row fixed md:-mx-5 sm:-mx-5 py-2 z-50">
+    <HeaderButton href="/">
+        <svg 
+        slot="before-text"
+        width="44" height="44" viewBox="0 0 30 30" stroke="#ffffff" fill="none" class="mt-2" >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+            <path d="M19 10l-7 -7l-9 9h2v7a2 2 0 0 0 2 2h7.5" />
+            <path d="M9 21v-6a2 2 0 0 1 2 -2h2c.661 0 1.248 .32 1.612 .815" />
+            <path d="M19 14l-2 4h4l-2 4" />
+          </svg>
+        Inicio
+    </HeaderButton>
+    <HeaderButton href="/productos">
+        <svg 
+        name="before-text"
+        width="44" height="44" viewBox="0 0 30 30" class="mt-2"  stroke="#ffffff" fill="none">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+            <path d="M3 21l18 0" />
+            <path d="M3 7v1a3 3 0 0 0 6 0v-1m0 1a3 3 0 0 0 6 0v-1m0 1a3 3 0 0 0 6 0v-1h-18l2 -4h14l2 4" />
+            <path d="M5 21l0 -10.15" />
+            <path d="M19 21l0 -10.15" />
+            <path d="M9 21v-4a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v4" />
+          </svg>
+        Productos
+    </HeaderButton>
+    <HeaderButton href='/acercade'>
+        <svg 
+        slot="before-text"
+        width="44" height="44" viewBox="0 0 30 30" class="mt-2"  stroke="#ffffff" fill="none">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+            <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0" />
+            <path d="M12 9h.01" />
+            <path d="M11 12h1v4h1" />
+          </svg>
+          Sobre nosotros
+    </HeaderButton>
+</nav>
+
+<style>
+    #header-nav {
+			animation: blurMobile linear both;
+			animation-timeline: scroll();
+			animation-range: 0 500px;
+	}
+
+    @keyframes blurMobile {
+        to {
+            box-shadow:
+                0px 5px 50px rgba(0, 0, 0, 0.1),
+                0px 0px 0 1px rgba(0, 0, 0, 0.3);
+            background: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+        }
+    }
+</style>

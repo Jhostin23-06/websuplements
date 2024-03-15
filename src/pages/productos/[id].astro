@@ -1,0 +1,15 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { productos } from "../../lib/data";
+const { id } = Astro.params;
+const producto = productos.find(producto => producto.id === id);
+import ProductoInfo from '../../components/ProductoInfo.astro'
+---
+
+<Layout title="Productos">
+  <div
+    class="grid grid-cols-1 gap-x-8"
+  >
+    <ProductoInfo producto={producto} alt='Productos' />
+  </div>
+</Layout>
