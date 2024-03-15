@@ -1,13 +1,12 @@
 ---
 import Layout from '@/layouts/Layout.astro';
 import Header from '@/components/Header.astro';
-import { Image } from 'astro:assets'
 ---
 
 <Layout title="Suplementos Failoc">
 	<Header />
 	<div class="grid grid-cols-1 lg:grid-cols-2 gap-4 items-center">
-		<Image class='col-span-1 w-full rounded-xl' src="/banner2.jpg" alt="Banner Inicio" width={200} height={200} />
+		<img class="col-span-1 w-full rounded-xl" src="../../public/img12.jpg" width="200" height="200" src="" alt="">
 		<h1 class="font-extralight text-justify sm:text-sm md:text-lg lg:text-xl dark:text-gray-400 text-pretty">Lograr una alimentación equilibrada que satisfaga todas tus necesidades nutricionales puede ser todo un desafío. En <span>FAILOC SUPLEMENTOS</span>, hemos creado una empresa pensada para ayudarte en este camino. Nos dedicamos a proporcionarte los mejores suplementos para complementar tu dieta y garantizar que obtengas los nutrientes esenciales que tu cuerpo necesita. Descubre cómo podemos ayudarte a alcanzar tus objetivos de bienestar con nuestra amplia gama de productos de alta calidad. <span>¡Bienvenido a una vida más saludable con FAILOC SUPLEMENTOS!</span></h1>
 	</div>
 </Layout>
