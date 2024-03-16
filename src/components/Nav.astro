@@ -1,50 +1,100 @@
 ---
-import HeaderButton  from '../components/HeaderButton.astro'
+import HeaderButton from "../components/HeaderButton.astro";
 ---
-<nav id="header-nav" class="flex-col md:flex lg:flex sm:block hidden justify-center items-center w-screen top-0 text-center md:flex-row fixed md:-mx-5 sm:-mx-5 py-2 z-50">
+
+<nav
+    id="header-nav"
+    class="flex-col md:flex lg:flex sm:block hidden justify-center items-center w-screen top-0 text-center md:flex-row fixed md:-mx-5 sm:-mx-5 py-2 z-50"
+>
     <HeaderButton href="/">
-        <svg 
-        slot="before-text"
-        width="44" height="44" viewBox="0 0 30 30" stroke="#ffffff" fill="none" class="mt-2" >
-            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-            <path d="M19 10l-7 -7l-9 9h2v7a2 2 0 0 0 2 2h7.5" />
-            <path d="M9 21v-6a2 2 0 0 1 2 -2h2c.661 0 1.248 .32 1.612 .815" />
-            <path d="M19 14l-2 4h4l-2 4" />
-          </svg>
+        <svg
+            slot="before-text"
+            width="44"
+            height="44"
+            viewBox="0 0 30 30"
+            stroke="#ffffff"
+            fill="none"
+            class="mt-2"
+        >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M19 10l-7 -7l-9 9h2v7a2 2 0 0 0 2 2h7.5"></path>
+            <path d="M9 21v-6a2 2 0 0 1 2 -2h2c.661 0 1.248 .32 1.612 .815"
+            ></path>
+            <path d="M19 14l-2 4h4l-2 4"></path>
+        </svg>
         Inicio
     </HeaderButton>
     <HeaderButton href="/productos">
-        <svg 
-        name="before-text"
-        width="44" height="44" viewBox="0 0 30 30" class="mt-2"  stroke="#ffffff" fill="none">
-            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-            <path d="M3 21l18 0" />
-            <path d="M3 7v1a3 3 0 0 0 6 0v-1m0 1a3 3 0 0 0 6 0v-1m0 1a3 3 0 0 0 6 0v-1h-18l2 -4h14l2 4" />
-            <path d="M5 21l0 -10.15" />
-            <path d="M19 21l0 -10.15" />
-            <path d="M9 21v-4a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v4" />
-          </svg>
+        <svg
+            name="before-text"
+            width="44"
+            height="44"
+            viewBox="0 0 30 30"
+            class="mt-2"
+            stroke="#ffffff"
+            fill="none"
+        >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M3 21l18 0"></path>
+            <path
+                d="M3 7v1a3 3 0 0 0 6 0v-1m0 1a3 3 0 0 0 6 0v-1m0 1a3 3 0 0 0 6 0v-1h-18l2 -4h14l2 4"
+            ></path>
+            <path d="M5 21l0 -10.15"></path>
+            <path d="M19 21l0 -10.15"></path>
+            <path d="M9 21v-4a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v4"></path>
+        </svg>
         Productos
     </HeaderButton>
-    <HeaderButton href='/acercade'>
-        <svg 
-        slot="before-text"
-        width="44" height="44" viewBox="0 0 30 30" class="mt-2"  stroke="#ffffff" fill="none">
-            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-            <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0" />
-            <path d="M12 9h.01" />
-            <path d="M11 12h1v4h1" />
-          </svg>
-          Sobre nosotros
+    <HeaderButton href="/ofertas">
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="icon icon-tabler icon-tabler-arrow-big-right-lines mt-2"
+            width="44"
+            height="44"
+            viewBox="0 0 30 30"
+            stroke="#ffffff"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+        >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path
+                d="M12 9v-3.586a1 1 0 0 1 1.707 -.707l6.586 6.586a1 1 0 0 1 0 1.414l-6.586 6.586a1 1 0 0 1 -1.707 -.707v-3.586h-3v-6h3z"
+            ></path>
+            <path d="M3 9v6"></path>
+            <path d="M6 9v6"></path>
+        </svg>
+        Ofertas
+    </HeaderButton>
+    <HeaderButton href="/acercade">
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="icon icon-tabler icon-tabler-info-triangle mt-2"
+            width="44"
+            height="44"
+            viewBox="0 0 30 30"
+            stroke="#ffffff"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+        >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path
+                d="M10.363 3.591l-8.106 13.534a1.914 1.914 0 0 0 1.636 2.871h16.214a1.914 1.914 0 0 0 1.636 -2.87l-8.106 -13.536a1.914 1.914 0 0 0 -3.274 0z"
+            ></path>
+            <path d="M12 9h.01"></path>
+            <path d="M11 12h1v4h1"></path>
+        </svg>
+        Acerca de
     </HeaderButton>
 </nav>
 
 <style>
     #header-nav {
-			animation: blurMobile linear both;
-			animation-timeline: scroll();
-			animation-range: 0 500px;
-	}
+        animation: blurMobile linear both;
+        animation-timeline: scroll();
+        animation-range: 0 500px;
+    }
 
     @keyframes blurMobile {
         to {

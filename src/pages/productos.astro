@@ -6,7 +6,7 @@ import { productos } from "../lib/data";
 
 <Layout title="Productos">
   <div
-    class="grid grid-cols-1 mt-32 sm:grid-cols-2 my-4 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-8"
+    class="grid sm:grid-cols-2 grid-cols-1 md:grid-cols-3 gap-5 mt-32"
   >
     {
       productos.map((producto) => (
@@ -17,6 +17,6 @@ import { productos } from "../lib/data";
 
       ))
     }
-    <img src="/img11.webp" alt="Banner" class="w-full rounded-md lg:col-span-2 sm:col-span-full">
   </div>
+  
 </Layout>

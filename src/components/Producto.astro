@@ -11,7 +11,25 @@ const { id, title, description, image } = producto;
 import { Image } from "astro:assets";
 ---
 
-<article
+<div class="relative flex flex-col items-center justify-center max-w-full p-[1.5px] rounded-md  hover:cursor-pointer">
+    <div class="grid gap-4">
+        <figure>
+            <a
+                href={href ?? "#"}
+            >
+              <Image
+                class="h-auto max-w-full rounded-lg hover:transform md:hover:scale-110 lg::hover:scale-110 transition duration-300 ease-in-out"
+                alt="Producto 1"
+                src={image}
+                />  
+            </a>
+        </figure>
+    </div>
+</div>
+
+
+
+<!-- <article
     class="relative flex flex-col items-center justify-center max-w-full p-[1px] rounded-md bg-gradient-to-b from-white/20 via-transparent to-transparent hover:via-white/10 group"
 >
     <div
@@ -35,4 +53,4 @@ import { Image } from "astro:assets";
         </h3>
         <p class="text-xl text-center text-sky-200 text-pretty">{description}</p>
     </div>
-</article>
+</article> -->

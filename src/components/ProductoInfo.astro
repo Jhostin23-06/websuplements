@@ -5,15 +5,17 @@ interface Props {
     alt?: string;
 }
 const { producto, alt } = Astro.props;
-const { title, description, image } = producto;
+const { title, cant, description, precio, image } = producto;
 import { Image } from "astro:assets";
 ---
 
-<div class="hero-content flex-col lg:flex-row md:flex-row justify-center items-center mt-24">
-  <Image src={image} class="max-w-full sm:max-w-lg rounded-lg shadow-slate-800 shadow-md" alt={title} />
-  <div class="md:text-start text-center">
-    <h1 class="md:text-5xl font-bold text-3xl w-full text-pretty">{title}</h1>
-    <p class="py-6">{description}</p>
+<div class="hero-content flex-col lg:flex-row md:flex-row justify-center items-center mt-[75px]">
+  <Image src={image} class="md:max-w-full w-96 sm:max-w-full rounded-lg shadow-slate-800 shadow-md" alt={title} />
+  <div class="md:text-start text-center flex flex-col">
+    <p>{cant}</p>
+    <h1 class="md:text-3xl font-bold text-3xl w-full text-pretty">{title}</h1>
+    <p class="py-6 text-sm text-pretty font-light">{description}</p>
+    <p class="mb-10 text-base font-medium">Precio: <span class="bg-green-100 text-green-800 w-20 text-center text-xs font-medium me-2 px-2.5 py-0.5 rounded-lg dark:bg-green-900 dark:text-green-300">{precio}</span></p>
     <button class="btn btn-primary animate-tada animate-delay-1000 ">Pedir ahora</button>
   </div>
 </div>
